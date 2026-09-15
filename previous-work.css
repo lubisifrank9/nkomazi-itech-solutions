@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #172033; background: #f5f7fb; }
+a { color: inherit; text-decoration: none; }
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 6%; background: #07111f; color: #fff; flex-wrap: wrap; }
+.brand { font-weight: 800; letter-spacing: .04em; }
+nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: .92rem; }
+nav a { opacity: .85; }
+nav a:hover, nav a.active { opacity: 1; color: #62d5ff; }
+.hero { min-height: 430px; background: linear-gradient(90deg, rgba(3,10,22,.82), rgba(3,10,22,.25)), url("images/image18.jpg") center/cover no-repeat; display: grid; place-items: center; text-align: center; color: #fff; padding: 60px 6%; }
+.hero-overlay { max-width: 800px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; font-weight: 700; color: #1598c7; }
+.hero .eyebrow { color: #8ce4ff; }
+h1 { font-size: clamp(2.3rem, 6vw, 4.5rem); margin: 12px 0; }
+.hero p:last-child { font-size: 1.1rem; }
+.content-section { max-width: 1150px; margin: auto; padding: 70px 6%; }
+.section-heading { text-align: center; margin-bottom: 35px; }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); margin: 8px 0; }
+.section-heading p:last-child { color: #657084; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; }
+.gallery-item { border: 0; padding: 0; background: #fff; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 5px 18px rgba(14,30,50,.12); aspect-ratio: 1 / 1; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s ease; }
+.gallery-item:hover img, .gallery-item:focus img { transform: scale(1.05); }
+.gallery-item:focus { outline: 3px solid #1598c7; outline-offset: 3px; }
+.lightbox { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.9); display: grid; place-items: center; padding: 55px 20px 20px; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 95vw; max-height: 88vh; object-fit: contain; }
+.lightbox-close { position: absolute; top: 12px; right: 20px; border: 0; background: transparent; color: #fff; font-size: 2.5rem; cursor: pointer; }
+footer { background: #07111f; color: #d9e2ef; text-align: center; padding: 25px 6%; font-size: .9rem; }
+@media (max-width: 700px) { .site-header { padding: 16px 5%; } nav { gap: 10px; } .hero { min-height: 350px; } .content-section { padding: 45px 5%; } }
